@@ -1,4 +1,124 @@
-/* Style the body and make it take up the entire viewport */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px; 
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+}
+
+#new-task {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#add-task-btn {
+    width: 100%; 
+    padding: 10px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-task-btn:hover {
+    background: #4cae4c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: #e9ecef;
+    border-radius: 4px;
+}
+
+.task-text, .subtask-text {
+    flex-grow: 1; 
+    margin-right: 10px;
+}
+
+.check-btn, .delete-btn, .add-subtask-btn, .check-subtask-btn, .delete-subtask-btn, .drag-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.check-btn:hover,
+.delete-btn:hover,
+.add-subtask-btn:hover,
+.check-subtask-btn:hover,
+.delete-subtask-btn:hover,
+.drag-btn:hover {
+    background: #0056b3;
+}
+
+.completed .task-text, .completed .subtask-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    #new-task {
+        margin-bottom: 10px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .check-btn, .delete-btn, .add-subtask-btn, .check-subtask-btn, .delete-subtask-btn, .drag-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .subtask-list {
+        padding-left: 20px;
+    }
+}
+
+
+/* 
+
+
 body, html {
     height: 100%;
     margin: 0;
@@ -10,7 +130,7 @@ body, html {
     align-items: center;
 }
 
-/* Main container that will take up the whole page */
+
 .container {
     width: 100%;
     max-width: 1000px;
@@ -25,7 +145,7 @@ body, html {
     flex-direction: column;
 }
 
-/* Header section */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +153,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Task list should take up the remaining space */
+
 #task-list {
     flex-grow: 1;
     margin-top: 20px;
@@ -41,7 +161,7 @@ header {
     padding: 0;
 }
 
-/* Style for each individual task */
+
 li {
     background-color: #f9f9f9;
     margin-bottom: 10px;
@@ -58,7 +178,7 @@ li {
     color: #999;
 }
 
-/* Style for task buttons */
+
 button {
     background-color: #007bff;
     color: white;
@@ -73,7 +193,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Style for task input */
+
 #new-task {
     flex: 1;
     padding: 10px;
@@ -83,7 +203,7 @@ button:hover {
     margin-right: 10px;
 }
 
-/* Style for Add Task button */
+
 #add-task-btn {
     background-color: #28a745;
     border-color: #28a745;
@@ -102,7 +222,7 @@ button:hover {
     border-radius: 4px;
 }
 
-/* Scroll bar styling for the task list if it overflows */
+
 #task-list::-webkit-scrollbar {
     width: 8px;
 }
@@ -137,4 +257,4 @@ button:hover {
     text-decoration: line-through;
     color: #999;
 }
-
+ */
