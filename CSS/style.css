@@ -1,79 +1,140 @@
-body {
+/* Style the body and make it take up the entire viewport */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
+/* Main container that will take up the whole page */
 .container {
-    background-color: #fff;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 100%;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-.input-container {
+/* Header section */
+header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-input {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-ul {
-    list-style-type: none;
+/* Task list should take up the remaining space */
+#task-list {
+    flex-grow: 1;
+    margin-top: 20px;
+    list-style: none;
     padding: 0;
 }
 
+/* Style for each individual task */
 li {
-    padding: 10px;
     background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
 }
 
-li.completed {
+.completed .task-text {
     text-decoration: line-through;
-    color: #777;
+    color: #999;
 }
 
-.remove-btn {
-    background-color: #dc3545;
+/* Style for task buttons */
+button {
+    background-color: #007bff;
     color: white;
     border: none;
+    padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-    padding: 5px 10px;
+    margin-left: 10px;
 }
 
-.remove-btn:hover {
-    background-color: #c82333;
+button:hover {
+    background-color: #0056b3;
 }
+
+/* Style for task input */
+#new-task {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Style for Add Task button */
+#add-task-btn {
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 10px 20px;
+}
+
+#add-task-btn:hover {
+    background-color: #218838;
+}
+
+.task-date {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Scroll bar styling for the task list if it overflows */
+#task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+#task-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+.subtask-list {
+    list-style-type: none;
+    padding-left: 20px; 
+}
+
+.subtask-list li {
+    background-color: #e9ecef;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.subtask-list .completed .subtask-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
